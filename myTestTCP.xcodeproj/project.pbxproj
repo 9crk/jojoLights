@@ -13,6 +13,7 @@
 		930BDC7D23ADC8EF009C6D20 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 930BDC7B23ADC8EF009C6D20 /* Main.storyboard */; };
 		930BDC8923ADC8EF009C6D20 /* myTestTCPTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 930BDC8823ADC8EF009C6D20 /* myTestTCPTests.swift */; };
 		930BDC9423ADC8EF009C6D20 /* myTestTCPUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 930BDC9323ADC8EF009C6D20 /* myTestTCPUITests.swift */; };
+		930BDCA323ADC909009C6D20 /* zhouhua.c in Sources */ = {isa = PBXBuildFile; fileRef = 930BDCA223ADC909009C6D20 /* zhouhua.c */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,6 +47,8 @@
 		930BDC8F23ADC8EF009C6D20 /* myTestTCPUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = myTestTCPUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		930BDC9323ADC8EF009C6D20 /* myTestTCPUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = myTestTCPUITests.swift; sourceTree = "<group>"; };
 		930BDC9523ADC8EF009C6D20 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		930BDCA123ADC908009C6D20 /* myTestTCP-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "myTestTCP-Bridging-Header.h"; sourceTree = "<group>"; };
+		930BDCA223ADC909009C6D20 /* zhouhua.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = zhouhua.c; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -76,10 +79,12 @@
 		930BDC6923ADC8EC009C6D20 = {
 			isa = PBXGroup;
 			children = (
+				930BDCA223ADC909009C6D20 /* zhouhua.c */,
 				930BDC7423ADC8EC009C6D20 /* myTestTCP */,
 				930BDC8723ADC8EF009C6D20 /* myTestTCPTests */,
 				930BDC9223ADC8EF009C6D20 /* myTestTCPUITests */,
 				930BDC7323ADC8EC009C6D20 /* Products */,
+				930BDCA123ADC908009C6D20 /* myTestTCP-Bridging-Header.h */,
 			);
 			sourceTree = "<group>";
 		};
@@ -192,6 +197,7 @@
 				TargetAttributes = {
 					930BDC7123ADC8EC009C6D20 = {
 						CreatedOnToolsVersion = 11.2;
+						LastSwiftMigration = 1120;
 					};
 					930BDC8323ADC8EF009C6D20 = {
 						CreatedOnToolsVersion = 11.2;
@@ -255,6 +261,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				930BDC7823ADC8EC009C6D20 /* ViewController.swift in Sources */,
+				930BDCA323ADC909009C6D20 /* zhouhua.c in Sources */,
 				930BDC7623ADC8EC009C6D20 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -419,6 +426,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = myTestTCP/myTestTCP.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
@@ -429,8 +437,11 @@
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
+				MACOSX_DEPLOYMENT_TARGET = 10.12;
 				PRODUCT_BUNDLE_IDENTIFIER = id001.myTestTCP;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "myTestTCP-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 			};
 			name = Debug;
@@ -439,6 +450,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = myTestTCP/myTestTCP.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
@@ -449,8 +461,10 @@
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
+				MACOSX_DEPLOYMENT_TARGET = 10.12;
 				PRODUCT_BUNDLE_IDENTIFIER = id001.myTestTCP;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "myTestTCP-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 			};
 			name = Release;
